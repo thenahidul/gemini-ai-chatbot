@@ -10,8 +10,8 @@ const chatSchema = z.object( {
 		.max( 1024, 'Max character must not exceed 100' ),
 	id: z
 		.string()
-		.min( 1, 'Cannot be empty' )
-		.max( 32, 'Max character must not exceed 32' )
+		.min( 8, 'Cannot be empty' )
+		.max( 36, 'Max character must not exceed 32' )
 
 } );
 
@@ -27,11 +27,11 @@ export const chatController = {
         try {
             const { prompt, id } = req.body;
 
-            const response = await chatService.sendMessage( prompt, id )
+            const response = await chatService.sendMessage( prompt, id );
 
             res.json( response )
         } catch ( error ) {
-            // res.json( error )
+            // res.json({ error } )
             res.status( 500 ).send( { error: 'Failed to return a response.' } )
         }
     }

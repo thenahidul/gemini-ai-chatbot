@@ -25,6 +25,8 @@ bun install
 Create a `.env` file inside packages/server and add your Gemini API key.  
 `GEMINI_API_KEY=your_key_here`
 
+https://aistudio.google.com/api-keys
+
 ## Running the Project
 
 From the root directory:  

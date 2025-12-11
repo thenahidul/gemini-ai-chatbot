@@ -38,7 +38,10 @@ This starts both the server and client in development mode.
 root/  
 ├── packages/  
 │   ├── server/      # API server using Gemini  
-│   └── client/      # Frontend chatbot interface  
+│   └── client/      # Frontend chatbot interface 
+└── index.ts
+└── package.json
+└── tsconfig.json
 └── README.md  
 ```  
 
